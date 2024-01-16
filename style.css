@@ -15,7 +15,7 @@
   --clr-neutral-VeryDarkblue: hsl(224, 21%, 14%);
 
   /* FONT FAMILY */
-  --ff-Jakarta: 'Plus Jakarta Sans', sans-serif;
+  --ff-Jakarta: "Plus Jakarta Sans", sans-serif;
 
   /* FONT WEIGHT */
   --fw-500: 500;
@@ -23,12 +23,95 @@
 }
 *,
 *::after,
-*::before{
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-img{
+img {
   display: block;
-  width: 100%;
+  max-width: 100%;
+}
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  font-family: var(--ff-Jakarta);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-neutral-LightGrayishBlue1);
+}
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+.container {
+  padding: 1rem;
+  max-width: 40rem;
+  /* max-width: 23.4375rem; */
+  background: var(--clr-neutral-White);
+}
+.header {
+  align-items: center;
+  justify-content: space-between;
+}
+.header h1 {
+  font-size: 1.3rem;
+  padding-block: 0.5rem;
+}
+
+.header h1 > span {
+  background: var(--clr-primary-Blue);
+  padding-inline: 0.5rem;
+  font-size: 1.3rem;
+  color: var(--clr-neutral-White);
+  border-radius: 0.3rem;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--clr-neutral-GrayishBlue);
+}
+.unread {
+  background: var(--clr-neutral-VeryLightGrayishBlue);
+}
+.notification__items {
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  align-items: start;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+.notification_img{
+  margin-left: auto;
+}
+.notification__items img {
+  width: 25%;
+  max-width: 2.75rem;
+}
+.description {
+  line-height: 1.3rem;
+}
+.description .name {
+  font-weight: 800;
+}
+.description .notification__action {
+  color: var(--clr-neutral-GrayishBlue);
+}
+.description .notification__time {
+  color: var(--clr-neutral-GrayishBlue);
+}
+
+.description .notification__comment {
+  display: block;
+  margin-top: 0.75rem;
+  padding: 1.25rem;
+  outline: 1px solid var(--clr-neutral-LightGrayishBlue2);
+  color: var(--clr-neutral-Darkgrayishblue);
+  font-weight: 500;
 }
