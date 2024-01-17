@@ -48,7 +48,6 @@ body {
 .container {
   padding: 1rem;
   max-width: 40rem;
-  /* max-width: 23.4375rem; */
   background: var(--clr-neutral-White);
 }
 .header {
@@ -76,10 +75,28 @@ body {
   font-weight: 500;
   color: var(--clr-neutral-GrayishBlue);
 }
+.btn:hover{
+  color: var(--clr-primary-Blue);
+}
 .unread {
   background: var(--clr-neutral-VeryLightGrayishBlue);
 }
+
+/* .unread::after{
+  position: absolute;
+  content: "";
+  right: 0;
+  height: 0.5rem;
+  width: 0.5rem;
+  background: var(--clr-primary-Red);
+  border-radius: 50%;
+} */
+
+.read{
+  background: var(--clr-neutral-White);
+}
 .notification__items {
+  position: relative;
   cursor: pointer;
   margin-top: 1rem;
   font-size: 0.9rem;
@@ -91,16 +108,22 @@ body {
   margin-left: auto;
 }
 .notification__items img {
-  width: 25%;
+  width: 30%;
   max-width: 2.75rem;
 }
 .description {
   line-height: 1.3rem;
+  word-spacing: 2px;
 }
 .description .name {
   font-weight: 800;
 }
+.description .name:hover,
+.achievement:hover {
+  color: var(--clr-primary-Blue);
+}
 .description .notification__action {
+  position: relative;
   color: var(--clr-neutral-GrayishBlue);
 }
 .description .notification__time {
@@ -108,10 +131,37 @@ body {
 }
 
 .description .notification__comment {
-  display: block;
   margin-top: 0.75rem;
-  padding: 1.25rem;
+  padding: 1rem;
   outline: 1px solid var(--clr-neutral-LightGrayishBlue2);
   color: var(--clr-neutral-Darkgrayishblue);
   font-weight: 500;
+}
+.notification__comment:hover{
+  background: var(--clr-neutral-VeryLightGrayishBlue);
+}
+
+.club{
+  position: relative;
+  color: var(--clr-primary-Blue);
+  font-weight: var(--fw-800);
+}
+.achievement{
+  position: relative;
+
+  color: var(--clr-neutral-GrayishBlue);
+  font-weight: var(--fw-800);
+}
+.achievement.unread_dot::after,
+.notification__action.unread_dot::after,
+.club.unread_dot::after{
+  position: absolute;
+  content: "";
+  right: -0.7rem;
+  top: 0.4rem;
+  height: 0.5rem;
+  width: 0.5rem;
+  background: var(--clr-primary-Red);
+  border-radius: 50%;
+
 }

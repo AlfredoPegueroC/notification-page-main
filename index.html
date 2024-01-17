@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Notifications page</title>
 
@@ -30,107 +25,104 @@
       <div class="wrapper">
         <header class="header flex">
           <h1>Notifications <span>3</span></h1>
-          <button class="btn">Mark all as read</button>
+          <button class="btn" id="btn">Mark all as read</button>
         </header>
       </div>
 
       <section class="notification">
-        <article class="notification__items flex unread">
+        <article class="notification__items flex unread" aria-colindex="0">
           <img src="./assets/images/avatar-mark-webber.webp" alt="avatar" />
-          <p class="description">
-            <span class="name"> Mark Webber </span>
-            <span class="notification__action">
-              reacted to your recent post My first tournament today!
-            </span>
-            <br />
-            <span class="notification__time"> 1m ago </span>
-          </p>
+          <div class="description">
+            <p>
+              <span class="name"> Mark Webber </span>
+              <span class="notification__action">
+                reacted to your recent post
+                <span id="mark" class="achievement unread_dot">My first tournament today!</span>
+              </span>
+            </p>
+
+            <h5 class="notification__time">1m ago</h5>
+          </div>
         </article>
 
-        <article class="notification__items flex unread">
+        <article class="notification__items flex unread" aria-colindex="1">
           <img src="./assets/images/avatar-angela-gray.webp" alt="avatar" />
-          <p class="description">
-            <span class="name"> Angela Gray </span>
-            <span class="notification__action"> followed you </span>
-            <br />
-            <span class="notification__time"> 5m ago </span>
-          </p>
+          <div class="description">
+            <p>
+              <span class="name"> Angela Gray </span>
+              <span class="notification__action unread_dot"> followed you </span>
+            </p>
+
+            <h5 class="notification__time">5m ago</h5>
+          </div>
         </article>
 
-        <article class="notification__items flex unread">
+        <article class="notification__items flex unread" aria-colindex="2">
           <img src="./assets/images/avatar-jacob-thompson.webp" alt="avatar" />
-          <p class="description">
-            <span class="name"> Jacob Thompson </span>
-            <span class="notification__action">
-              has joined your group Chess Club
-            </span>
-            <br />
-            <span class="notification__time"> 1 day ago </span>
-          </p>
+          <div class="description">
+            <p>
+              <span class="name"> Jacob Thompson </span>
+              <span class="notification__action">
+                has joined your group <span class="club unread_dot">Chess Club</span>
+              </span>
+            </p>
+
+            <h5 class="notification__time">1 day ago</h5>
+          </div>
         </article>
 
         <article class="notification__items flex">
-          <img
-            src="./assets/images/avatar-rizky-hasanuddin.webp"
-            alt="avatar"
-          />
-          <p class="description">
-            <span class="name"> Rizky Hasanuddin </span>
-            <span class="notification__action">
-              sent you a private message
-            </span>
-            <br />
-            <span class="notification__time"> 5 days ago </span>
-            <br/>
-            <span class="notification__comment">
-              Hello, thanks for setting up the Chess Club. I've been a member for
-            a few weeks now and I'm already having lots of fun and improving my
-            game.
-            </span>
-            
-          </p>
+          <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="avatar" />
+          <div class="description">
+            <p>
+              <span class="name"> Rizky Hasanuddin </span>
+              <span class="notification__action"> sent you a private message </span>
+            </p>
+            <h5 class="notification__time">5 days ago</h5>
+            <p class="notification__comment">
+              Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having
+              lots of fun and improving my game.
+            </p>
+          </div>
         </article>
 
         <article class="notification__items flex">
           <img src="./assets/images/avatar-kimberly-smith.webp" alt="avatar" />
-          <p class="description">
-            <span class="name"> Kimberly Smith </span>
-            <span class="notification__action">
-              commented on your picture
-            </span>
-            <br />
-            <span class="notification__time"> 1 week ago </span>
-          </p>
+          <div class="description">
+            <p>
+              <span class="name"> Kimberly Smith </span>
+              <span class="notification__action"> commented on your picture </span>
+            </p>
+            <h5 class="notification__time">1 week ago</h5>
+          </div>
           <img class="notification_img" src="./assets/images/image-chess.webp" alt="" />
         </article>
 
         <article class="notification__items flex">
           <img src="./assets/images/avatar-nathan-peterson.webp" alt="avatar" />
-          <p class="description">
-            <span class="name"> Kimberly Smith </span>
-            <span class="notification__action">
-              reacted to your recent post 5 end-game strategies to increase your
-              win rate
-            </span>
-            <br />
-            <span class="notification__time"> 2 weeks ago </span>
-          </p>
+          <div class="description">
+            <p>
+              <span class="name"> Nathan Peterson </span>
+              <span class="notification__action"> reacted to your recent post </span>
+              <span class="achievement">5 end-game strategies to increase your win rate</span>
+            </p>
+            <h5 class="notification__time">2 weeks ago</h5>
+          </div>
         </article>
 
         <article class="notification__items flex">
           <img src="./assets/images/avatar-anna-kim.webp" alt="avatar" />
-          <p class="description">
-            <span class="name"> Anna Kim </span>
-            <span class="notification__action">
-              left the group Chess Club
-            </span>
-            <br />
-            <span class="notification__time"> 2 weeks ago </span>
-          </p>
+          <div class="description">
+            <p>
+              <span class="name">Anna Kim </span>
+              <span class="notification__action"> left the group <span class="club">Chess Club</span> </span>
+            </p>
+            <h5 class="notification__time">2 weeks ago</h5>
+          </div>
         </article>
       </section>
     </main>
-
+    <script src="app.js"></script>
     <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
