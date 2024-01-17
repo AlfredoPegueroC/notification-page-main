@@ -17,7 +17,7 @@ function readAll(items) {
 notificationItems.forEach((element) => {
   element.addEventListener("click", (e) => {
     readIndividual(element);
-    readIndividual(dotsItems[element.ariaColIndex]);
+    readIndividual(dotsItems[element.getAttribute("data-id")]);
   });
 });
 
